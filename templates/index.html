@@ -29,17 +29,23 @@
       </div>
       <div class="leaderboard">
         <h1> Leaderboard </h1>
-          <!--<table class="table">
+          <table class="table">
                 <thead>
-                    <th>#</th>
-                    <th>Name</th>
-                    <th>Score</th>
+                    <tr>
+                        <th>Name</th>
+                        <th>Score</th>
+                    </tr>
                 </thead>
                 <tbody>
-                    <tr></tr>
+                    {%for score in scores %}
+                    <tr>
+                        <td>{{ score[0] }}</td>
+                        <td>{{ score[1] }}</td>
+                    </tr>
+                    {% endfor %}
                 </tbody>
-            </table> /-->
-        <ol class="scores">
+            </table>
+        <!--<ol class="scores">
             {% for score in scores %}
             <li>
                 <span class="name">
@@ -50,7 +56,7 @@
                 </span>
             </li>
             {% endfor %}
-        </ol>
+        </ol> /-->
       </div>
     </div>
   </body>
